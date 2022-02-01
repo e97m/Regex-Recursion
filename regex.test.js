@@ -30,7 +30,8 @@ required extention are jpg, jpeg and png.
 function imagesSearcher(text){
     let arr = [];
     let validation = /[a-zA-Z0-9-]+\.(png)|[a-zA-Z0-9-]+\.(jpg)|[a-zA-Z0-9-]+\.(jpeg)/g;
-    arr.push(text.match(validation))
+    arr =text.match(validation)
+    if (arr === null) {arr = []}
     return arr
 }
 

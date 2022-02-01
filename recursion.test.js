@@ -1,10 +1,15 @@
 /* Write a function to do the division operation without using the built-in division*/
 
 function division(number, dividedBy){
-    if (number<dividedBy){
-    return 0
-    } else return division(number-dividedBy, dividedBy) + 1
-}
+    let counter = 0;
+    if (number < dividedBy || dividedBy == 0){
+      return 0;
+  
+    } else {
+        counter += 1;
+       return division(number - dividedBy, dividedBy) + counter;
+       }
+  }
 
 /* Write a function that implement Math.pow(x,n) but using recursion
 Example:
